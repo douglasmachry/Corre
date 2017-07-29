@@ -3,11 +3,15 @@ package com.example.iossenac.corre;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.hardware.Sensor;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -19,7 +23,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
@@ -27,7 +34,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-
+    private SeekBar customSeekBar;
+    private EditText distancia;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationClient;
 
@@ -36,7 +44,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationCallback locationCallback;
     private Location lastLocation;
     private Bitmap pontofinal;
-
     //tabela de espelhamento - hash
     //dica de estudo: caelum - estrutura de dados e Java
     private HashMap<String, DadoExercicio> hashPoiDados =
@@ -50,9 +57,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
 
         locationCallback = new LocationCallback() {
             @Override
@@ -139,7 +143,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     lastLocation.getLongitude()
             );
             mMap.clear();
-            mMap.addMarker(new MarkerOptions().position(latLng));
+            pontofinal = BitmapFactory.decodeResource(getResources(),R.mipmap.running);
+            mMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.fromBitmap(pontofinal)));
             CameraUpdate cameraUpdate =
                     CameraUpdateFactory.newLatLngZoom(latLng, 18);
 

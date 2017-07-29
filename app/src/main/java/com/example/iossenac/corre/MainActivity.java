@@ -2,8 +2,12 @@ package com.example.iossenac.corre;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
