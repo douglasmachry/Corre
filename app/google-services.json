@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "700488081181",
+    "firebase_url": "https://corre-1500135544243.firebaseio.com",
+    "project_id": "corre-1500135544243",
+    "storage_bucket": "corre-1500135544243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700488081181:android:7eed9e9af581163d",
+        "android_client_info": {
+          "package_name": "com.example.iossenac.corre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700488081181-c88od3aags19a8dlqit27b8en9acqmta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY3f0tREx_n2fi7bJ2sp_0FtOw6FWThGg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
