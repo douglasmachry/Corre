@@ -1,7 +1,8 @@
-package com.example.iossenac.corre;
+package com.example.iossenac.corre.model;
+
+import com.example.iossenac.corre.model.Picture;
 
 import java.io.Serializable;
-import java.net.URL;
 
 /**
  * Created by iossenac on 05/08/17.

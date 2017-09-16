@@ -1,32 +1,31 @@
-package com.example.iossenac.corre;
+package com.example.iossenac.corre.ctrl;
 import com.bumptech.glide.Glide;
-import com.facebook.AccessToken;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
+import com.example.iossenac.corre.R;
+import com.example.iossenac.corre.model.Exercicio;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.hardware.Sensor;
 import android.location.Location;
-import android.media.Image;
-import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
+
+import com.example.iossenac.corre.model.Usuario;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -37,26 +36,22 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 import static com.bumptech.glide.Glide.with;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
-    private SeekBar customSeekBar;
-    private EditText distancia;
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,
+         NavigationView.OnNavigationItemSelectedListener{
+
+
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationClient;
-    private Bitmap imageProfile;
+
     private final int MY_REQUEST_CODE = 10;
 
     private LocationCallback locationCallback;
@@ -66,7 +61,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     //tabela de espelhamento - hash
     //dica de estudo: caelum - estrutura de dados e Java
-    private HashMap<String, DadoExercicio> hashPoiDados =
+    private HashMap<String, Exercicio> hashPoiDados =
             new HashMap<>();
 
     @Override
@@ -109,17 +104,81 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         Intent it = getIntent();
         Usuario usuario;
         usuario = (Usuario) it.getSerializableExtra("usuario");
-
         nome.setText(usuario.name);
 
 
         Glide
                 .with(this)
                 .load(usuario.picture.data.url)
-
                 .into(foto);
 
+        navigationView.setNavigationItemSelectedListener(this);
+    }
 
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.lateral, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_historico) {
+            Intent it = new Intent(this, HistoricoActivity.class);
+            Intent intent = getIntent();
+            Usuario usuario;
+            usuario = (Usuario) intent.getSerializableExtra("usuario");
+            it.putExtra("usuario", usuario);
+            startActivity(it);
+        } else if (id == R.id.nav_pontuacao) {
+
+        } else if (id == R.id.nav_musica) {
+            Intent musicas = getPackageManager().getLaunchIntentForPackage("com.google.android.music");
+            startActivity(musicas);
+        } else if (id == R.id.nav_configuracoes) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_sair) {
+            LoginManager.getInstance().logOut();
+            this.finish();
+            Intent it = new Intent(this, LoginFacebook.class);
+            startActivity(it);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
 
@@ -214,6 +273,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 locationCallback,  //interface de retorno de mudança de posição
                 null /* Looper  - é responsável pelo desenho da tela */);
     }
+
 
 
 }

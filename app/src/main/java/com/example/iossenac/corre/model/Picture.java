@@ -1,4 +1,6 @@
-package com.example.iossenac.corre;
+package com.example.iossenac.corre.model;
+
+import com.example.iossenac.corre.model.DataFace;
 
 import java.io.Serializable;
 

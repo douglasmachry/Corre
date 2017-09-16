@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">Corre</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_name">Corre!</string>
+    <string name="title_activity_maps">Corre!</string>
+    <string name="title_activity_lateral">LateralActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">674294552717483</string>
+    <string name="fb_login_protocol_scheme">fb674294552717483</string>
+
+
 </resources>

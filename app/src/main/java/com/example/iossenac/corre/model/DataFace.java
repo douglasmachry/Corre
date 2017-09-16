@@ -1,4 +1,4 @@
-package com.example.iossenac.corre;
+package com.example.iossenac.corre.model;
 
 import java.io.Serializable;
 

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_cdfb7a2149d2df184ead5c3f230daec8daafb8aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/be7817456fb23d5a5e33d65dd765d1be1f5d2c3a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0e39662b49ef66950c0941aa5fd4c49346a7c341">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_af7c3307b37692750e8f62cb211c387a87e0eb11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="73ed6f59daca7c4374d01a0078777dd05ad3826b">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1d6cda591bfe081c076dacef7fbe5d1171095518/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/disklrucache/4.0.0/d88059003509074dd59fa226c822724bcf5ec0ca/disklrucache-4.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d88059003509074dd59fa226c822724bcf5ec0ca">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/disklrucache-4.0.0_42adffd5e1a22ae876f38bcc88993fdeb28a0bc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/845995ded1143ff04f0a03415f29b0e3a522b695/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="af26875652e085cd14713ff655bc3aa07960d459">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dd7155cb60f36fd3c7133e60ee49dadfef47a4a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/annotations/4.0.0/f80192e6fd828d41c7da6f3552b0bef5d89cb26e/annotations-4.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f80192e6fd828d41c7da6f3552b0bef5d89cb26e">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/annotations-4.0.0_5ab0eabab52b76767481b20ef9859b7846ae6b5a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/4b2647357cb196de8208f1a9a1e0480ba4e000b2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6dfa77c356a9a8c13ad61253ed95ed3a746527e6">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6fe903365a01aa147895e5d9bdd3c4e82c815f6d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.2_162034ad473a9482b1ea7f8cf3b6ad344c7cb954/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/e699063e1e1945ca7d775aa2bcb1bbe99479a67f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a611d7a00671ec4eb3050a21425fae955a38eb8a">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e597ac408fea095d5030d474390e03784cb57e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/0eef6f79a6a7ccf1ee1a12e026d3827da53f242b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="aba37a3eec04e174dc59f00cf4bd7992061d847a">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e585d5123520986a2212b6ae998e6c9d27a0c57f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.android/build-cache/0d3c494c3021988e48b9c3938bfb634419cabe97/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ef65e4780d67d06abddd6e2d15dd4e0519ad8d8a">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2895276cac1d52dff343de6f403eddeea66753b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.0.0/dff931af436f0a2815d0109ab2258bbce2d6275d/glide-4.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dff931af436f0a2815d0109ab2258bbce2d6275d">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-4.0.0_4ff91a71dc8e36d48bde8943dd1f0d246a9e165e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/iossenac/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.0.0/47c487cc4e64e6ab127a517669ca9a7b49f8c61d/gifdecoder-4.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47c487cc4e64e6ab127a517669ca9a7b49f8c61d">
+        <dex dex="/Users/iossenac/AndroidStudioProjects/Corre/app/build/intermediates/transforms/dex/debug/folders/1000/10/gifdecoder-4.0.0_977a747ec36491c8a0ea27f5b6dd10f4c5533024/classes.dex" />
+    </item>
+
+</items>
