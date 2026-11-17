@@ -1,0 +1,15 @@
+# Local machine configuration
+local.properties
+
+# Gradle and Android build output
+.gradle/
+**/build/
+
+# Android Studio / IntelliJ project metadata
+.idea/
+*.iml
+
+# Generated / local files
+.DS_Store
+*.apk
+*.aab
